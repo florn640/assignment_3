@@ -1,18 +1,45 @@
 function setup() {
 	// create a place to draw
-	createCanvas(640, 360);
+	createCanvas(640, 500);
 	noStroke();
-	noLoop();
 }
 
+var ballX = 200;
+var ballY = 100;
+var ballA = 200;
+var ballB = 100;
+var ballSpeedX = 3;
+var ballSpeedY = 3;
+
 function draw() {
-	// clear the background
-	background(150, 50, 50);
+// change position
+	ballX = ballX + ballSpeedX;
+	ballY = ballY + ballSpeedY;
+	ballA = ballA + ballSpeedX
+	ballB = ballB + ballSpeedY
+	// right
+	if (ballX > width) {
+		ballSpeedX = -ballSpeedX;
+	}
 
-	// set a fill color
-	fill(255, 255, 255);
+	// bottom
+	if (ballY > height) {
+		ballSpeedY = -ballSpeedY;
+	}
 
-	// draw the ellipse
-	var diameter = random(100, 200);
-	ellipse(320, 180, diameter, diameter);
+	// left
+	if (ballX < 0) {
+		ballSpeedX = -ballSpeedX;
+	}
+
+	// top
+	if (ballY < 0) {
+		ballSpeedY = -ballSpeedY;
+	}
+
+
+	background(0);
+	ellipse(ballX, ballY, 50, 50);
+	ellipse(ballA, ballB, 50, 50);
+
 }
