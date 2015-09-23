@@ -4,15 +4,13 @@ function setup() {
 	noStroke();
 	noLoop();
 }
-
 function draw() {
-	// clear the background
-	background(50, 50, 150);
-
-	// set a fill color
-	fill(255, 255, 255);
-
-	// draw the ellipse
-	var diameter = random(100, 200);
-	ellipse(320, 180, diameter, diameter);
+	background(51, 50, 50);
+	noFill();
+	colorMode(HSL, 200);
+	for(var i = 0; i < 100; i++){
+		fill(i, 100, 50);
+		stroke(255,0)
+		rect(i*55, 150, 40, 40);
+	}
 }
