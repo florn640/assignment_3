@@ -15,8 +15,7 @@ function draw() {
 // change position
 	ballX = ballX + ballSpeedX;
 	ballY = ballY + ballSpeedY;
-	ballA = ballA + ballSpeedX
-	ballB = ballB + ballSpeedY
+
 	// right
 	if (ballX > width) {
 		ballSpeedX = -ballSpeedX;
@@ -40,6 +39,8 @@ function draw() {
 
 	background(0);
 	ellipse(ballX, ballY, 50, 50);
-	ellipse(ballA, ballB, 50, 50);
+
+	
+
 
 }
