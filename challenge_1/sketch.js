@@ -6,11 +6,11 @@ function setup() {
 }
 function draw() {
 	background(51, 52, 55);
-	noFill();
-	colorMode(HSL, 165);
-	for(var i = 0; i < 100; i++){
-		fill(i, 100, 50);
-		stroke(255,0)
+
+
+	for(var i = 0; i < 10; i++){
+		stroke(255,255, 255)
+		fill(i* 40, 0, 0);
 		rect(i*60, 200, 45, 45);
 	}
 }
