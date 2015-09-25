@@ -9,18 +9,19 @@ function draw() {
 	// clear the background
 	background(115, 116, 171);
 
-	//for(var i = 1; i < 38; i++){
-		//stroke(255, 255,255)
-	//	ellipse(20, 80, 50, 50);
-//	if ( i === 2){
-//		stroke(255, 255, 255);
- //} else {
-  //  fill(0, 0, 0);
-
+noFill();
+//draw black circles
 stroke (0, 0, 0);
 	for(i = 0; i < 100; i++) {
-   ellipse(320, 250, i * 2, i * 2)
+   ellipse(320, 250, i * 10, i * 10)
+//draw white circles
   }
+
+stroke (255, 255, 255);
+		for(i = 0; i < 100; i++) {
+	   ellipse(320, 250, i * 10 * 2, i * 10 * 2)
+
+	  }
 
 
 }
